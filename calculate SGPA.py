@@ -61,3 +61,6 @@ SGP = (GP_en + GP_cs + GP_ev + GP_ar)
 
 SGPA = (SGP/Sch)
 print(f"Your SGPA for this semester is: {SGPA}")
+
+
+input('Press ENTER to exit')
