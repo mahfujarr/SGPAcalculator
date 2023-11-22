@@ -30,23 +30,34 @@ def markToGrade(m):
         print("You've got 'A'")
         return 4.0
 
-def creditHours(h):
-    if (h==eng):
-        return 4
-    elif(h==csc):
-        return 3     
-    elif(h==env):
-        return 2     
-    elif(h==art):
-        return 1     
+def GradePoint(m,h):
+    return(m*h)
+
+ch_eng = 4
+ch_csc = 3
+ch_env = 2
+ch_art = 1   
+Sch = (ch_eng + ch_csc + ch_env + ch_art)
+
 
 print("Welcome to IUBAT SGPA calculator for Fall'23.\nI really hope you get satisfied after seeing the result.")
 
-eng = float(input("Enter your ENG 101 marks: \n="))
-eng=markToGrade(eng)
-csc = float(input("Enter your CSC 103 marks: \n="))
-csc=markToGrade(csc)
-env = float(input("Enter your ENV 103 marks: \n="))
-env=markToGrade(env)
-art = float(input("Enter your ART 102 marks: \n="))
-art=markToGrade(art)
+en = float(input("Enter your ENG 101 marks: \n="))
+en=markToGrade(en)
+cs = float(input("Enter your CSC 103 marks: \n="))
+cs=markToGrade(cs)
+ev = float(input("Enter your ENV 103 marks: \n="))
+ev=markToGrade(ev)
+ar = float(input("Enter your ART 102 marks: \n="))
+ar=markToGrade(ar)
+
+
+GP_en = GradePoint(en,ch_eng)
+GP_cs = GradePoint(cs,ch_csc)
+GP_ev = GradePoint(ev,ch_env)
+GP_ar = GradePoint(ar,ch_art)
+
+SGP = (GP_en + GP_cs + GP_ev + GP_ar)
+
+SGPA = (SGP/Sch)
+print(f"Your SGPA for this semester is: {SGPA}")
